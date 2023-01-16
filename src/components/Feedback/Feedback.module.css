@@ -1,0 +1,44 @@
+.boxFeedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.sectionTitle {
+  text-align: center;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 100px;
+  height: 30px;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background-color: yellow;
+  transform: scale(1.25);
+}
+
+.buttonGood {
+  background-color: rgba(21, 0, 248, 0.6);
+}
+
+.textTotal {
+  padding: 10px;
+  border-top: 1px solid black;
+}
+
+.positiveFeedback {
+  font-weight: bolder;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(0, 248, 66, 0.9);
+}
