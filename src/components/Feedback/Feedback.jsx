@@ -9,12 +9,27 @@ export default function Feedback() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const options = ['good', 'neutral', 'bad'];
-  console.log(options[2]);
+  const addsReviewFeedback = event => {
+    const { name } = event.currentTarget;
 
-  const addsReviewFeedbackGood = state => {
-    setState(prevState => prevState + 1);
-    console.log('button +1');
+    switch (name) {
+      case 'good':
+        setGood(state => state + 1);
+        break;
+
+      case 'neutral':
+        setNeutral(state => state + 1);
+        break;
+
+      case 'bad':
+        setBad(state => state + 1);
+        break;
+
+      default:
+        return;
+    }
+
+    // console.log('button +1');
   };
 
   const countTotalFeedback = () => {
@@ -31,8 +46,8 @@ export default function Feedback() {
     <div className={css.boxFeedback}>
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={options}
-          onLeaveFeedback={addsReviewFeedbackGood()}
+          options={['good', 'neutral', 'bad']}
+          onLeaveFeedback={addsReviewFeedback}
         />
       </Section>
       <Section title="Statistics">
